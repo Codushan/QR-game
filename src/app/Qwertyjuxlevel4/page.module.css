@@ -1,0 +1,235 @@
+.container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #3b3b3b; /* Dark grey background representing asphalt */
+  color: white;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.content {
+  position: relative;
+  z-index: 10;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.roadBackground {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.roadSigns {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 100%;
+  width: 30px;
+  background-color: #c4c4c4; /* Light gray road sign background */
+  transform: translateX(-50%);
+}
+
+.sign {
+  height: 100%;
+  background-color: #ff5733; /* Bright red for stop signs */
+  clip-path: inset(0 0 0 80%);
+}
+
+.setup, .playing, .completed {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.playing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  background-color: #00b300; /* Bright green for "Go" signal */
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border: 4px solid white;
+  margin-bottom: 1.5rem;
+  transform: rotate(-4deg);
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.instructions {
+  background-color: #fbc531; /* Yellow for caution signs */
+  padding: 1.8rem;
+  border-radius: 1rem;
+  border: 4px solid white;
+  transform: rotate(3deg);
+  margin-bottom: 2rem;
+}
+
+.instructionsTitle {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.instructionsList {
+  list-style-type: decimal;
+  text-align: left;
+  margin-left: 1rem;
+  padding-left: 1.5rem;
+}
+
+.startButton {
+  width: 100%;
+  margin-top: 2rem;
+  background-color: #ff6f61; /* Coral red for active start button */
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.startButton:hover {
+  background-color: #f46d6a;
+}
+
+.score {
+  background-color: #00b300; /* Green for score display */
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border: 4px solid white;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  width: 60%;
+}
+
+.scanInstructions {
+  background-color: #fbc531; /* Yellow for scan instructions */
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 4px solid white;
+  text-align: center;
+  width: 100%;
+}
+
+.demoButton {
+  background-color: #ff6f61; /* Coral red for demo button */
+  color: white;
+  font-weight: bold;
+  padding: 1.2rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 0.7rem;
+}
+
+.demoButton:hover {
+  background-color: #f46d6a;
+}
+
+.quest {
+  padding-top: 20px;
+}
+
+.question {
+  margin-bottom: 2.5rem;
+  width: 100%;
+}
+
+.questionBox {
+  background-color: #ff5733; /* Bright red for question box */
+  padding: 1.5rem;
+  font-size: 1.7rem;
+  border-radius: 1rem;
+  border: 4px solid black;
+  transform: rotate(-8deg);
+  text-align: center;
+}
+
+.IDBox {
+  margin-top: 1.5rem;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.IDInput {
+  width: 100%;
+  font-size: 1.6rem;
+  padding: 0.7rem;
+  border-radius: 0.5rem;
+  border: 1px solid #d1d5db;
+}
+
+.nextClue {
+  text-decoration: underline;
+  background-color: #e74c3c; /* Red for next clue button */
+  color: white;
+  font-size: 1.3rem;
+  border-radius: 1rem;
+  display: flex;
+  width: 60%;
+  height: 45px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.completedMessage {
+  background-color: #00b300; /* Green for completion message */
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 4px solid white;
+  text-align: center;
+}
+
+.hexagonWrapper {
+  display: inline-block;
+  padding: 5px;
+  background-color: white;
+  border-radius: 1rem;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.GTNH {
+  background-color: #2980b9; /* Blue for road police */
+  color: white;
+  width: 210px;
+  height: 220px;
+  font-weight: bold;
+  font-size: 1.4rem;
+  padding: 1.5rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  border-radius: 1rem;
+}

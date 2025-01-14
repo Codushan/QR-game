@@ -1,0 +1,235 @@
+.container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #2f3b4e; /* Dark navy background resembling night-time road atmosphere */
+  color: #f9f9f9; /* Light text for contrast */
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.content {
+  position: relative;
+  z-index: 10;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.roadBackground {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.roadSigns {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 100%;
+  width: 28px;
+  background-color: #666; /* Gray representing standard road signage */
+  transform: translateX(-50%);
+}
+
+.sign {
+  height: 100%;
+  background-color: #ff7f50; /* Coral orange for active stop signals */
+  clip-path: inset(0 0 0 80%);
+}
+
+.setup, .playing, .completed {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.playing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  background-color: #3498db; /* Sky blue for a calm, active header */
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border: 4px solid white;
+  margin-bottom: 2rem;
+  transform: rotate(-3deg);
+}
+
+.title {
+  font-size: 2.4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.instructions {
+  background-color: #e67e22; /* Orange for a warm caution sign */
+  padding: 1.8rem;
+  border-radius: 1rem;
+  border: 4px solid white;
+  transform: rotate(4deg);
+  margin-bottom: 2rem;
+}
+
+.instructionsTitle {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.instructionsList {
+  list-style-type: decimal;
+  text-align: left;
+  margin-left: 1.2rem;
+  padding-left: 1.5rem;
+}
+
+.startButton {
+  width: 100%;
+  margin-top: 2rem;
+  background-color: #1abc9c; /* Turquoise for a fresh start button */
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.startButton:hover {
+  background-color: #16a085;
+}
+
+.score {
+  background-color: #e74c3c; /* Red for score to grab attention */
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border: 4px solid white;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  width: 60%;
+}
+
+.scanInstructions {
+  background-color: #f39c12; /* Yellow for scan instructions */
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 4px solid white;
+  text-align: center;
+  width: 100%;
+}
+
+.demoButton {
+  background-color: #1abc9c; /* Turquoise for demo button */
+  color: white;
+  font-weight: bold;
+  padding: 1.2rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 0.7rem;
+}
+
+.demoButton:hover {
+  background-color: #16a085;
+}
+
+.quest {
+  padding-top: 20px;
+}
+
+.question {
+  margin-bottom: 2.5rem;
+  width: 100%;
+}
+
+.questionBox {
+  background-color: #ff7f50; /* Coral orange for question box */
+  padding: 1.5rem;
+  font-size: 1.7rem;
+  border-radius: 1rem;
+  border: 4px solid black;
+  transform: rotate(-8deg);
+  text-align: center;
+}
+
+.IDBox {
+  margin-top: 1.5rem;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.IDInput {
+  width: 100%;
+  font-size: 1.6rem;
+  padding: 0.7rem;
+  border-radius: 0.5rem;
+  border: 1px solid #d1d5db;
+}
+
+.nextClue {
+  text-decoration: underline;
+  background-color: #9b59b6; /* Purple for next clue button */
+  color: white;
+  font-size: 1.3rem;
+  border-radius: 1rem;
+  display: flex;
+  width: 60%;
+  height: 45px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.completedMessage {
+  background-color: #2ecc71; /* Green for completion message */
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 4px solid white;
+  text-align: center;
+}
+
+.hexagonWrapper {
+  display: inline-block;
+  padding: 5px;
+  background-color: white;
+  border-radius: 1rem;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.GTNH {
+  background-color: #8e44ad; /* Deep purple for "roadwork" */
+  color: white;
+  width: 210px;
+  height: 220px;
+  font-weight: bold;
+  font-size: 1.4rem;
+  padding: 1.5rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  border-radius: 1rem;
+}
