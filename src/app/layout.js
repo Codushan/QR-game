@@ -1,4 +1,4 @@
-import { Head } from 'next/document';
+// import { Head } from 'next/document';
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -20,9 +20,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Head>
-          <link rel="icon" href="/cea.png" />
-      </Head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
       </body>
