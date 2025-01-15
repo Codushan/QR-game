@@ -80,7 +80,7 @@ const RoadSignHunt = () => {
               <div className={styles.IDBox}>
                 <input
                   type="text"
-                  placeholder="Type your ID"
+                  placeholder="Secret Code..."
                   className={styles.IDInput}
                   value={userId}
                   onChange={(e) => setUserId(e.target.value)}
